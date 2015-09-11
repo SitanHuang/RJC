@@ -25,25 +25,17 @@ Launch Configurations=Launch Configuration 0
 [Launch][Launch Configuration 0]
 Configured Launch Modes=execute
 Configured Launchers=nativeAppLauncher
-Name=jasm
+Name=New Compiled Binary Launcher
 Type=Native Application
 
 [Launch][Launch Configuration 0][Data]
-Arguments=test.j
-Debugger Shell=
-Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x02\x00\x00\x00\x12\x00K\x00D\x00e\x00v\x00_\x00J\x00a\x00s\x00m\x00\x00\x00\x08\x00j\x00a\x00s\x00m)
+Arguments=test.rjc
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x02\x00\x00\x00\x12\x00K\x00D\x00e\x00v\x00_\x00J\x00a\x00s\x00m\x00\x00\x00\x06\x00r\x00j\x00c)
 Dependency Action=Build
-Display Demangle Names=true
-Display Static Members=false
 EnvironmentGroup=
 Executable=file:///home/D/CPP-dev/KDev_Jasm/
 External Terminal=konsole --noclose --workdir %workdir -e %exe
-GDB Path=
-Project Target=KDev_Jasm,jasm
-Remote GDB Config Script=
-Remote GDB Run Script=
-Remote GDB Shell Script=
-Start With=ApplicationOutput
+Project Target=KDev_Jasm,rjc
 Use External Terminal=false
 Working Directory=file:///home/D/CPP-dev/KDev_Jasm
 isExecutable=false

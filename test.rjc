@@ -1,6 +1,15 @@
 load "std/std.j"
 
-:int temp 0
-loop temp neq 100000
-	temp temp + 1
+:int test 5
+if test bg 4
+	puts 'test bg 4'
 end
+if test sm 5
+	puts 'test sm 5'
+elif test sm 6
+	puts 'test sm 6'
+end
+if (test sm 5) or (test bg 4)
+	puts 'hahaha'
+end
+

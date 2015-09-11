@@ -94,14 +94,14 @@ vector<string> getTokens ( string& expression ) {
 		} else if ( array[index] == '\n'&&!inQuote ) {
 			insertToken() currentToken = JASM_LINE_SEP;
 			insertToken()
-		} else if ( array[index] == '"' ) {
+		} else if ( array[index] == '"' || array[index] == '\'') {
 			if ( inQuote ) {
 				inQuote = false;
-				currentToken = currentToken + array[index];
+				currentToken = currentToken + '"';
 				insertToken()
 			} else {
 				inQuote = true;
-				currentToken = currentToken + array[index];
+				currentToken = currentToken + '"';
 			}
 		} else if ( array[index] == '\\' ) {
 			if ( inQuote ) {
@@ -452,9 +452,9 @@ bool parseBool ( vector< string >& vec ) {
 	} else if ( oper=="and" ) {
 		return left=="1"&&right=="1";
 	} else if ( oper=="bg" ) {
-		return atol(left.c_str()) > atol(left.c_str());
+		return atol(left.c_str()) > atol(right.c_str());
 	} else if ( oper=="sm" ) {
-		return atol(left.c_str()) < atol(left.c_str());
+		return atol(left.c_str()) < atol(right.c_str());
 	} else {
 		throw "Unsupported operation " + oper;
 	}
