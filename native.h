@@ -36,7 +36,14 @@ void array$set ( vector<string> args,string scope )
     Document d;
     d.Parse ( v.c_str() );
     if ( index>= ( signed int ) d.Size() ) {
-        throw "Index out of bound: " + to_string ( index );
+		for (int i = (signed int) d.Size();i < index+1;i++) {
+			Value objValue;
+			objValue.SetString("$nil$",string("$nil$").size());
+			d.PushBack(objValue, d.GetAllocator());
+		}
+		if ( index>= ( signed int ) d.Size() ) {
+			throw "Index out of bound: " + to_string ( index );
+		}
     }
     Document d2;
     d2.Parse ( str.c_str() );
