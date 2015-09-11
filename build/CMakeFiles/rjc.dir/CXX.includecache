@@ -102,9 +102,17 @@ rapidjson/stringbuffer.h
 rapidjson/reader.h
 /home/D/CPP-dev/KDev_Jasm/rapidjson/reader.h
 
+/home/D/CPP-dev/KDev_Jasm/parse.cpp
+parse.h
+/home/D/CPP-dev/KDev_Jasm/parse.h
+
 /home/D/CPP-dev/KDev_Jasm/parse.h
 jasminclude.h
 /home/D/CPP-dev/KDev_Jasm/jasminclude.h
+
+/home/D/CPP-dev/KDev_Jasm/print.cpp
+print.h
+/home/D/CPP-dev/KDev_Jasm/print.h
 
 /home/D/CPP-dev/KDev_Jasm/print.h
 parse.h

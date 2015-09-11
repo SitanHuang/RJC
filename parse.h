@@ -45,7 +45,7 @@ bool inArray ( initializer_list<const char*> a, string b );
 
 void trimTokens ( vector<string>& vec );
 
-#define JASM_OPERATIONS {"eq","neq","or","and"}
+#define JASM_OPERATIONS {"eq","neq","or","and","bg","sm"}
 
 bool parseBool ( vector<string>& vec );
 

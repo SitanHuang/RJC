@@ -451,6 +451,10 @@ bool parseBool ( vector< string >& vec ) {
 		return left=="1"||right=="1";
 	} else if ( oper=="and" ) {
 		return left=="1"&&right=="1";
+	} else if ( oper=="bg" ) {
+		return atol(left.c_str()) > atol(left.c_str());
+	} else if ( oper=="sm" ) {
+		return atol(left.c_str()) < atol(left.c_str());
 	} else {
 		throw "Unsupported operation " + oper;
 	}
