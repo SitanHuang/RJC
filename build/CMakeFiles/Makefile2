@@ -53,38 +53,38 @@ CMAKE_SOURCE_DIR = /home/D/CPP-dev/KDev_Jasm
 CMAKE_BINARY_DIR = /home/D/CPP-dev/KDev_Jasm/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/jasm.dir
+# Target rules for target CMakeFiles/rjc.dir
 
 # All Build rule for target.
-CMakeFiles/jasm.dir/all:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/depend
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/build
+CMakeFiles/rjc.dir/all:
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/depend
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/D/CPP-dev/KDev_Jasm/build/CMakeFiles  1 2 3 4
-	@echo "Built target jasm"
-.PHONY : CMakeFiles/jasm.dir/all
+	@echo "Built target rjc"
+.PHONY : CMakeFiles/rjc.dir/all
 
 # Include target in all.
-all: CMakeFiles/jasm.dir/all
+all: CMakeFiles/rjc.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/jasm.dir/rule: cmake_check_build_system
+CMakeFiles/rjc.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/D/CPP-dev/KDev_Jasm/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/jasm.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rjc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/D/CPP-dev/KDev_Jasm/build/CMakeFiles 0
-.PHONY : CMakeFiles/jasm.dir/rule
+.PHONY : CMakeFiles/rjc.dir/rule
 
 # Convenience name for target.
-jasm: CMakeFiles/jasm.dir/rule
-.PHONY : jasm
+rjc: CMakeFiles/rjc.dir/rule
+.PHONY : rjc
 
 # clean rule for target.
-CMakeFiles/jasm.dir/clean:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/clean
-.PHONY : CMakeFiles/jasm.dir/clean
+CMakeFiles/rjc.dir/clean:
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/clean
+.PHONY : CMakeFiles/rjc.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/jasm.dir/clean
+clean: CMakeFiles/rjc.dir/clean
 .PHONY : clean
 
 #=============================================================================

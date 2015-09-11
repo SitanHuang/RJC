@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++14 -Wall -g    CMakeFiles/rjc.dir/parse.cpp.o CMakeFiles/rjc.dir/print.cpp.o CMakeFiles/rjc.dir/stack.cpp.o CMakeFiles/rjc.dir/utils.cpp.o  -o rjc -rdynamic 

@@ -14,8 +14,13 @@
 #include "Class.h"
 #include <memory>
 
+#include <limits.h> /* PATH_MAX */
+#include <stdio.h>
+#include <stdlib.h>
 
 using namespace std;
+
+string MAIN_FILE = "";
 
 void setToLastClassScope ( Variable* v, string scope )
 {
@@ -103,6 +108,13 @@ vector<string> advReadUntil2 ( vector<string> tokens,initializer_list<const char
 					       cout << s << " ";\
 					   }
 
+std::string dirnameOf(const std::string& fname)
+{
+     size_t pos = fname.find_last_of("\\/");
+     return (std::string::npos == pos)
+         ? ""
+         : fname.substr(0, pos);
+}
 
 
 /***
@@ -266,7 +278,7 @@ void JASM_RUNCODE ( vector<string> tokens,string file="$inline$",string classNam
             } else if ( tokens[index]=="load" ) {
                 string newfile = tokens[++index];
                 index++;
-                newfile = quotoken ( newfile );
+                newfile = dirnameOf(MAIN_FILE) + "/" + quotoken ( newfile );
                 string code = "";
                 char c;
                 fstream input;
@@ -381,15 +393,15 @@ void JASM_RUNCODE ( vector<string> tokens,string file="$inline$",string classNam
 #include <chrono>
 int main ( int argc, char **argv )
 {
-	unsigned long milliseconds_since_epoch =
-    std::chrono::system_clock::now().time_since_epoch() / 
-    std::chrono::nanoseconds(1);
     try {
         native_h_init();
         if ( argc!=2 ) {
             throw string ( "Missing argument" );
         }
         string test_file = argv[1];
+		char buf[PATH_MAX + 1];
+		char *res = realpath(test_file.c_str(), buf);
+		MAIN_FILE = string(res);
         srand ( time ( nullptr ) );
         string code = "";
         char c;
@@ -406,10 +418,6 @@ int main ( int argc, char **argv )
         vector<string> tokens = getTokens ( code );
         JASM_RUNCODE ( tokens,test_file );
         jasmstack::gc();
-		unsigned long milliseconds_since_epoch2 =
-		std::chrono::system_clock::now().time_since_epoch() / 
-		std::chrono::nanoseconds(1);
-		cout << "spend " << (milliseconds_since_epoch2-milliseconds_since_epoch) << " nanoseconds" << endl;
         return 0;
     } catch ( string& s ) {
         cerr << s << endl;

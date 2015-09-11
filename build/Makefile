@@ -144,24 +144,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named jasm
+# Target rules for targets named rjc
 
 # Build rule for target.
-jasm: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 jasm
-.PHONY : jasm
+rjc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rjc
+.PHONY : rjc
 
 # fast build rule for target.
-jasm/fast:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/build
-.PHONY : jasm/fast
+rjc/fast:
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/build
+.PHONY : rjc/fast
 
 parse.o: parse.cpp.o
 .PHONY : parse.o
 
 # target to build an object file
 parse.cpp.o:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/parse.cpp.o
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/parse.cpp.o
 .PHONY : parse.cpp.o
 
 parse.i: parse.cpp.i
@@ -169,7 +169,7 @@ parse.i: parse.cpp.i
 
 # target to preprocess a source file
 parse.cpp.i:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/parse.cpp.i
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/parse.cpp.i
 .PHONY : parse.cpp.i
 
 parse.s: parse.cpp.s
@@ -177,7 +177,7 @@ parse.s: parse.cpp.s
 
 # target to generate assembly for a file
 parse.cpp.s:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/parse.cpp.s
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/parse.cpp.s
 .PHONY : parse.cpp.s
 
 print.o: print.cpp.o
@@ -185,7 +185,7 @@ print.o: print.cpp.o
 
 # target to build an object file
 print.cpp.o:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/print.cpp.o
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/print.cpp.o
 .PHONY : print.cpp.o
 
 print.i: print.cpp.i
@@ -193,7 +193,7 @@ print.i: print.cpp.i
 
 # target to preprocess a source file
 print.cpp.i:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/print.cpp.i
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/print.cpp.i
 .PHONY : print.cpp.i
 
 print.s: print.cpp.s
@@ -201,7 +201,7 @@ print.s: print.cpp.s
 
 # target to generate assembly for a file
 print.cpp.s:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/print.cpp.s
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/print.cpp.s
 .PHONY : print.cpp.s
 
 stack.o: stack.cpp.o
@@ -209,7 +209,7 @@ stack.o: stack.cpp.o
 
 # target to build an object file
 stack.cpp.o:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/stack.cpp.o
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/stack.cpp.o
 .PHONY : stack.cpp.o
 
 stack.i: stack.cpp.i
@@ -217,7 +217,7 @@ stack.i: stack.cpp.i
 
 # target to preprocess a source file
 stack.cpp.i:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/stack.cpp.i
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/stack.cpp.i
 .PHONY : stack.cpp.i
 
 stack.s: stack.cpp.s
@@ -225,7 +225,7 @@ stack.s: stack.cpp.s
 
 # target to generate assembly for a file
 stack.cpp.s:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/stack.cpp.s
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/stack.cpp.s
 .PHONY : stack.cpp.s
 
 utils.o: utils.cpp.o
@@ -233,7 +233,7 @@ utils.o: utils.cpp.o
 
 # target to build an object file
 utils.cpp.o:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/utils.cpp.o
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/utils.cpp.o
 .PHONY : utils.cpp.o
 
 utils.i: utils.cpp.i
@@ -241,7 +241,7 @@ utils.i: utils.cpp.i
 
 # target to preprocess a source file
 utils.cpp.i:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/utils.cpp.i
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/utils.cpp.i
 .PHONY : utils.cpp.i
 
 utils.s: utils.cpp.s
@@ -249,7 +249,7 @@ utils.s: utils.cpp.s
 
 # target to generate assembly for a file
 utils.cpp.s:
-	$(MAKE) -f CMakeFiles/jasm.dir/build.make CMakeFiles/jasm.dir/utils.cpp.s
+	$(MAKE) -f CMakeFiles/rjc.dir/build.make CMakeFiles/rjc.dir/utils.cpp.s
 .PHONY : utils.cpp.s
 
 # Help Target
@@ -262,9 +262,9 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... jasm"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... rjc"
 	@echo "... parse.o"
 	@echo "... parse.i"
 	@echo "... parse.s"
