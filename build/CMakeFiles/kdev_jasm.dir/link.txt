@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++14 -g    CMakeFiles/kdev_jasm.dir/jasm.cpp.o CMakeFiles/kdev_jasm.dir/parse.cpp.o CMakeFiles/kdev_jasm.dir/print.cpp.o CMakeFiles/kdev_jasm.dir/stack.cpp.o CMakeFiles/kdev_jasm.dir/utils.cpp.o CMakeFiles/kdev_jasm.dir/Variable.cpp.o  -o kdev_jasm -rdynamic 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++14 -Wall -g    CMakeFiles/jasm.dir/parse.cpp.o CMakeFiles/jasm.dir/print.cpp.o CMakeFiles/jasm.dir/stack.cpp.o CMakeFiles/jasm.dir/utils.cpp.o  -o jasm -rdynamic 
