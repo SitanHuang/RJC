@@ -276,8 +276,9 @@ void JASM_RUNCODE ( vector<string> tokens,string file="$inline$",string classNam
                 jasmstack::push ( returnvalue );
                 index = tokens.size();
             } else if ( tokens[index]=="load" ) {
-                string newfile = tokens[++index];
-                index++;
+				vector<string> expr = readUntil2 ( tokens,JASM_LINE_SEP,++index );
+				jasmstack::processExpression ( expr,file );
+				string newfile = parseString(expr);
                 newfile = dirnameOf(MAIN_FILE) + "/" + quotoken ( newfile );
                 string code = "";
                 char c;

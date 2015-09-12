@@ -1,4 +1,4 @@
-load "std/std.j"
+load 'std/std.j'
 
 :int test 5
 if test bg 4
@@ -13,7 +13,9 @@ if (test sm 5) or (test bg 4)
 	puts 'hahaha'
 end
 
-puts "--------------"
+puts "
+--------------
+"
 
 :class a array
 puts a

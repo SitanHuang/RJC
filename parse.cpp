@@ -318,6 +318,10 @@ string& quotoken ( string&orgin ) {
 	if ( startsWith ( orgin.c_str(),quo.c_str() ) &&endsWith ( orgin.c_str(),quo.c_str() ) ) {
 		orgin = orgin.substr ( 1,orgin.size()-2 );
 	}
+	quo = "'";
+	if ( startsWith ( orgin.c_str(),quo.c_str() ) &&endsWith ( orgin.c_str(),quo.c_str() ) ) {
+		orgin = orgin.substr ( 1,orgin.size()-2 );
+	}
 	return orgin;
 }
 
