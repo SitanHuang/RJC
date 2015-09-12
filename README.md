@@ -60,7 +60,7 @@ hahaha
 
 ### Operator overloading
 
-```
+```ruby
 load 'std/std.j'
 
 class num
