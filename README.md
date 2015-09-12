@@ -18,7 +18,9 @@ if (test sm 5) or (test bg 4)
 	puts 'hahaha'
 end
 
-puts "--------------"
+puts "
+--------------\n
+"
 
 :class a array
 puts a
@@ -37,7 +39,10 @@ output:
 test bg 4
 test sm 6
 hahaha
+
 --------------
+
+
 []
 [1,2,[" jfffdsjfdsjflkdsflkds",1,5],"hahahaha"]
 4
