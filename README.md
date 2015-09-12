@@ -2,6 +2,7 @@
 written in c++, by the java programmer
 kdevelop 4 project (cmake)
 c++14
+LICENSE: !()[http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png]
 ```
 load "std/std.j"
 
