@@ -298,11 +298,31 @@ void JASM_RUNCODE ( vector<string> tokens,string file="$inline$",string classNam
                 Class klass;
                 klass.name = name;
                 classes[name] = klass;
-
+				
                 string scope = file;
                 scope.append ( ">decclass" );
                 scope.append ( name );
                 JASM_RUNCODE ( code,scope,name );
+            } else if ( tokens[index]=="module" ) {
+                string name = tokens[++index];
+                vector<string> code = advReadUntil2 ( tokens, {}, {"end"},++index );
+                Class klass;
+                klass.name = name;
+                classes[name] = klass;
+				
+				string funname = name + "$init";
+                vector<string> arguments;
+                Method* method = new Method;
+                method->name = funname;
+                method->arguments = arguments;
+                method->code = vector<string>();
+				jasmstack::push(method);
+                string scope = file;
+                scope.append ( ">decclass" );
+                scope.append ( name );
+                JASM_RUNCODE ( code,scope,name );
+				vector<string> cod = {":class",name,name,JASM_LINE_SEP};
+				JASM_RUNCODE ( cod,file );
             } else if ( tokens[index]=="callnative" ) {
                 string methodName = tokens[++index];
                 vector<string> passarg = readUntil2 ( tokens,JASM_LINE_SEP,++index );

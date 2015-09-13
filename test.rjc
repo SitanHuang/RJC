@@ -1,15 +1,11 @@
-load 'std/' + "std.j"
-/this is a comment
-class p
-	fcn a
-		puts 'hahaha'
+load "std/std.j"
+module print
+	fcn puts string s
+		puts s
+		puts
+		puts s
 	end
 end
 
-p$a
-/overriding methods
-fcn p$a
-	puts 'eee'
-	/puts is method
-end
-p$a
+print.puts 'Hello world!'
+
