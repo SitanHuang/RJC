@@ -59,14 +59,14 @@ hahaha
 ```
 
 ### Adding a method
-```
+```ruby
 load 'std/' + "std.j"
 class p
         fcn init string s
                 @string s s
         end
 end
-/add a method
+
 fcn p$toString
         return string s
 end
