@@ -58,6 +58,36 @@ hahaha
 [" jfffdsjfdsjflkdsflkds",1,5]
 ```
 
+### Operator overloading
+
+```ruby
+load 'std/std.j'
+
+class num
+	fcn init int i
+		@int v i
+	end
+
+	fcn '+' int i
+		v v - i
+	end
+
+	fcn toString
+		return string v
+	end
+
+end
+
+:class n num 5
+n."+" 4
+puts n
+```
+
+output:
+```
+1
+```
+
 ### Example 2
 ```ruby
 load "std/std.j"
