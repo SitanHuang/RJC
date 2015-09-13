@@ -58,6 +58,27 @@ hahaha
 [" jfffdsjfdsjflkdsflkds",1,5]
 ```
 
+### Adding a method
+```ruby
+load 'std/' + "std.j"
+class p
+        fcn init string s
+                @string s s
+        end
+end
+
+fcn p$toString
+        return string s
+end
+
+:class p p 'hahaha'
+puts p
+```
+output:
+```
+hahaha
+```
+
 ### Operator overloading
 
 ```ruby
