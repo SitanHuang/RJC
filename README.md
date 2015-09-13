@@ -109,6 +109,31 @@ output:
 1
 ```
 
+### Modules
+
+modules are special classes with an instance
+
+```
+load "std/std.j"
+module print
+	fcn puts string s
+		puts s
+		puts
+		puts s
+	end
+end
+
+print.puts 'Hello world!'
+```
+
+output:
+```
+Hello world!
+
+Hello world!
+
+```
+
 ### Example 2
 ```ruby
 load "std/std.j"
