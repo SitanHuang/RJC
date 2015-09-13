@@ -113,7 +113,7 @@ output:
 
 modules are special classes with an instance
 
-```
+```ruby
 load "std/std.j"
 module print
 	fcn puts string s
