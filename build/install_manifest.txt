@@ -1,1 +1,1 @@
-/usr/local/bin/jasm
+/usr/local/bin/rjc

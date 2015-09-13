@@ -34,6 +34,12 @@ namespace jasmstack {
 	}
 
 	void push ( Method* var ) {
+		for ( unique_ptr<Method>& ptr : methods ) {
+			if ( var->name==ptr->name&&var->arguments.size() == ptr->arguments.size() ) {
+				methods.erase(std::remove(methods.begin(), methods.end(), ptr), methods.end());
+				break;
+			}
+		}
 		methods.push_back ( unique_ptr<Method> ( var ) );
 	}
 
